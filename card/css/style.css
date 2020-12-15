@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
+
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+/* .card, .fl, .title1, .title2, .title3, .title4{
+    border: 1px solid blue;
+} */
+
+#cards{
+    width: 1000px;
+    height: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card{
+    width: 300px;
+    height: 675px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    transition: .3s;
+}
+
+.card:hover{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.623);
+}
+
+.fl{
+    width: 280px;
+    height: 420px;
+    margin-top: 10px; 
+}
+
+.title1{
+    width: 280px;
+    height: 75px;
+    color: #616161;
+    font-size: 30px;
+    line-height: 1;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-around;    
+}
+
+.title2{
+    width: 280px;
+    height: 45px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title2 > div:nth-child(1){
+    font-size: 30px;
+    color: #242323;
+    font-weight: 600;  
+}
+
+.title2 > div:nth-child(2){
+    font-size: 19px;
+    color: #868282;
+    font-weight: 600;
+    text-decoration: line-through;
+}
+
+.title3{
+    width: 280px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.title4{
+    width: 280px;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+

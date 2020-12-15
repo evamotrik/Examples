@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrapper {
+            width: 90%;
+            max-width: 940px;
+            margin: 20px auto;
+            background-color: #fff;
+        }
+
+        .home-hero {
+            display: grid;
+            grid-gap: 1px;
+            grid-auto-rows: minmax(150px, auto);
+        }
+
+        .home-hero>* {
+            padding: 10px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .feature {
+            background-image: url(im/hero-demo1.jpg);
+            background-position: bottom left;
+            color: #fff;
+        }
+
+        .photos {
+            background-image: url(im/hero-demo2.jpg);
+            color: #fff;
+        }
+
+        .news {
+            background-image: url(im/hero-demo3.jpg);
+            color: #fff;
+        }
+
+        .special {
+            background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8)), url(im/hero-demo5.jpg);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .special h3, 
+        .amazing h3{
+            margin-top: auto;
+        }
+
+        .amazing{
+            background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9)), url(im/hero-demo4.jpg);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cta {
+            background-color: rgb(123,14,34);
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a.spam-button:link{
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            text-decoration: none;
+            background-color: white;
+            color: #333;
+            display:block;
+            padding: 5px;
+            margin: auto auto 20px;
+            width: 90%;
+            text-align: center;
+        }
+
+        @media(min-width: 500px){
+            .home-hero{
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .feature {
+                grid-column: 1/3;
+                grid-row: 1/3;
+            }
+
+            .special{
+                grid-column: 1;
+                grid-row: 3/6;
+            }
+
+            .amazing{
+                grid-column: 1;
+                grid-row: 6;
+            }
+
+            .cta {
+                grid-column: 2;
+                grid-row: 5/7;
+            }
+        }
+
+        @media(min-width: 800px){
+            .home-hero{
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: minmax(150px, auto) minmax(150px, auto);
+                grid-auto-rows: minmax(100px, auto);
+            }
+
+            .feature{
+                grid-column: 1;
+                grid-row: 1/6;
+            }
+
+            .special{
+                grid-column: 2;
+                grid-row: 1/4;
+            }
+
+            .amazing{
+                grid-column: 2;
+                grid-row: 4/6;
+            }
+
+            .cta{
+                grid-column: 3;
+                grid-row: 3/6;
+            }
+        }
+
+       
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="home-hero">
+            <div class="feature">
+                <h3>Нам нравятся воздушные шары</h3>
+                <p>Здесь вы можете найти много интересного, связанного с воздушными шарами</p>
+            </div>
+
+            <div class="special">
+                <h3>Необычные формы</h3>
+                <p>Почему некоторые из них так необычно выглядят?</p>
+            </div>
+            <div class="amazing">
+                <h3>10 вещей, которые вы обнаружите, когда летите на воздушном шаре</h3>
+            </div>
+
+            <div class="news">
+                <h3>Как воздушные шары зависят от погоды</h3>
+                <p>Горячие воздушные шары</p>
+            </div>
+            <div class="photos">
+                <h3>Фото воздушных шаров</h3>
+                <p>Праздник форм и размеров</p>
+            </div>
+            <div class="cta">
+                <p>Зарегистрируйтесь не откладывая!</p>
+                <a class="spam-button" href="#">Зарегистрироваться!</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

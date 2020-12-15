@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="world_style.css">
+</head>
+<body  onclick="cities(event)">
+
+    <img src="im//world.gif" alt="">
+
+    <script>
+         function cities(e) {
+        
+            if (e.pageX >= 610 && e.pageX <= 620 && e.pageY >= 245 && e.pageY <= 260) { 
+                i = 0;
+                window.open("file:///C:/Users/user/Desktop/FrontEnd/world1.html");
+            }
+
+            else if (e.pageX >= 980 && e.pageX <= 990 && e.pageY >= 185 && e.pageY <= 200) { 
+                window.open("file:///C:/Users/user/Desktop/FrontEnd/world2.html");
+            }
+            else if (e.pageX >= 1695 && e.pageX <= 1705 && e.pageY >= 275 && e.pageY <= 290) {
+                window.open("file:///C:/Users/user/Desktop/FrontEnd/world3.html");
+            }      
+        }
+
+
+    </script>
+    
+</body>
+</html>

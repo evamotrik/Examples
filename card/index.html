@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="cards"> </div>
+
+
+    <script>
+
+        myCard = [
+            {
+                cardName1: "Тайная жизнь",
+                cardName2: "домашних животных 2",
+                cost: 50,
+                currency: "руб.",
+                file: "card.jpg",
+                type: "blu-ray",
+                sale: true,
+                rating: 4.5,
+                but: "btn.png"
+            },
+            {
+                cardName1: "История игрушек 4",
+                cardName2: "Приключение Вилкинса",
+                cost: 60,
+                currency: "руб.",
+                file: "toy4.jpg",
+                type: "blu-ray",
+                sale: true,
+                rating: 4,
+                but: "btn.png"
+            },
+            {
+                cardName1: "Фердинанд",
+                cardName2: "Побег из коровника",
+                cost: 40,
+                currency: "руб.",
+                file: "ferd.jpg",
+                type: "blu-ray",
+                sale: true,
+                rating: 4,
+                but: "btn.png"
+            }
+        ]
+
+        let s = '';
+
+        for (i = 0; i < myCard.length; i++) {
+
+            let costFull = myCard[i].cost + ",00 " + myCard[i].currency;
+
+            //Расчет акции
+            let cost1 = 0, costAct = 0;
+            cost1 = myCard[i].cost * .9;
+            costAct = cost1 + ",00 " + myCard[i].currency;
+
+            //Расчет рейтинга
+            let stars = "";
+            let st1 = '', st2 = '', st3 = '';
+            st1 += `<img src="images/st1.png" alt="">`,
+                st2 += `<img src="images/st2.png" alt="">`,
+                st3 += `<img src="images/st3.png" alt="">`
+
+            for (let j = 1; j <= 5; j++) {
+                if (j <= myCard[i].rating) {
+                    stars += st1;
+                }
+
+                else if (j > myCard[i].rating && j <= myCard[i].rating + 0.5) {
+                    stars += st3;
+                }
+
+                else {
+                    stars += st2;
+                }
+            }
+
+
+
+
+            s += `
+    <div class="card">
+        <div class="fl">
+            <img src="images/${myCard[i].file}" alt="">
+        </div>
+        <div class="title1">
+            <div>${myCard[i].cardName1} </div>
+            <div>${myCard[i].cardName2} </div>
+        </div>
+        <div class="title2">
+            <div>${costAct}</div>
+            <div>${costFull}</div>
+        </div>
+        <div class="title3">
+            ${stars}
+        </div>
+        <div class="title4">
+            <img src="images/btn.png" alt="">
+        </div>
+    </div>`
+        }
+
+        cards.innerHTML = s;
+
+    </script>
+
+</body>
+
+</html>
